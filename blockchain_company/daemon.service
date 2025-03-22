@@ -1,0 +1,12 @@
+[Unit]
+Description=Unit for URL list check
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash <PATH_TO_SCRIPT>/check_urls.sh
+Restart=on-failure
+
+
+[Install]
+WantedBy=multi-user.target
